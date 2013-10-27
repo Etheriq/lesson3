@@ -1,0 +1,9 @@
+{
+    "autoload": {
+        "psr-0": {"invent\\": "src/"}
+    },
+    "require": {
+        "symfony/http-foundation": "2.4.*@dev",
+        "symfony/validator": "2.4.*@dev"
+    }
+}
