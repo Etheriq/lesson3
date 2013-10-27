@@ -12,7 +12,7 @@ namespace Invent;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-//include "../../vendor/autoload.php";
+include "../../vendor/autoload.php";
 
 require "model/model.php";
 
