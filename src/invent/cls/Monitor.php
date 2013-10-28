@@ -62,6 +62,7 @@ class Monitor extends AbstractInventory implements InventoryInterface
     public function sendToService()
     {
         $result = "Monitor with inventory number ".$this->getInventNumber()." and model ".$this->getModel()." sent to service organization.\n";
+
         return $result;
     }
 
@@ -71,6 +72,7 @@ class Monitor extends AbstractInventory implements InventoryInterface
             Inventory number: ".$this->getInventNumber().";\n
             Type of monitor: ".$this->getType().";\n
             Interface of monitor: ".$this->getInterf().";\n";
+
         return $result;
     }
 }

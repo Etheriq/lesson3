@@ -62,6 +62,7 @@ class Pc extends AbstractInventory implements InventoryInterface
     public function sendToService()
     {
         $result = "PC with inventory number ".$this->getInventNumber()." sent to service organization\n";
+
         return $result;
     }
 
@@ -72,6 +73,7 @@ class Pc extends AbstractInventory implements InventoryInterface
             Type of main processor: ".$this->getCpu()."; \n
             Volume of HDD: ".$this->getHdd()."; \n
             Volume of RAM: ".$this->getRam()."; \n ";
+
         return $result;
     }
 }

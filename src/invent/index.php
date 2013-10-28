@@ -12,15 +12,15 @@ namespace Invent;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-include "../../vendor/autoload.php";
+include '../../vendor/autoload.php';
 
-require "model/model.php";
+require 'model/model.php';
 
 $request = Request::createFromGlobals();
 $uri = $request->getPathInfo();
 
 if ($uri == "/") {
-    include "view/defaultTemplate.html";
+    include 'view/defaultTemplate.html';
 } elseif ($uri == "/all") {
     $response = showAll();
     $arg = array();
@@ -29,16 +29,15 @@ if ($uri == "/") {
             $arg[] = $show;
         }
     }
-    include "view/baseTemplate.html";
+    include 'view/baseTemplate.html';
 } elseif ($uri == "/showPc") {
     $response = showPc();
     $arg = array();
     foreach ($response as $view) {
         $arg[] = $view;
     }
-    include "view/pcTemplate.html";
-}/* elseif ($uri == "/show" and $request->query->has("invent"))
-{
+    include 'view/pcTemplate.html';
+}/* elseif ($uri == "/show" and $request->query->has("invent")) {
     echo $response = showByInvent($request->query->get("invent"));
 
 }*/ elseif ($uri == "/showMonitor") {
@@ -47,21 +46,17 @@ if ($uri == "/") {
     foreach ($response as $view) {
         $arg[] = $view;
     }
-    include "view/monitorTemplate.html";
+    include 'view/monitorTemplate.html';
 } elseif ($uri == "/showPrinter") {
     $response = showPrinter();
     $arg = array();
     foreach ($response as $view) {
         $arg[] = $view;
     }
-    include "view/printerTemplate.html";
+    include 'view/printerTemplate.html';
 } elseif ($uri == "/test") {
     echo $response = showTest();
 } else {
     $html = '<html><body><h1>Page with parameter '.$request->getPathInfo().' Not Found</h1><a href="../index.php">Back to main page</a></body></html>';
     echo $response = new Response($html, 404);
 }
-
-
-
-
