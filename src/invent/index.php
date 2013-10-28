@@ -57,6 +57,6 @@ if ($uri == "/") {
 } elseif ($uri == "/test") {
     echo $response = showTest();
 } else {
-    $html = '<html><body><h1>Page with parameter '.$request->getPathInfo().' Not Found</h1><a href="../index.php">Back to main page</a></body></html>';
+    $html = '<html><body><h1>Page with parameter '.$request->getPathInfo().' Not Found</h1><a href="index.php">Back to main page</a></body></html>';
     echo $response = new Response($html, 404);
 }
