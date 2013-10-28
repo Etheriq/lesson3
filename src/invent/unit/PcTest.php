@@ -13,14 +13,8 @@ namespace invent\unit;
 use PHPUnit_Framework_TestCase;
 use invent\cls\Pc;
 
-//include "../cls/Pc.php";
-/*
-include "../cls/AbstractInventory.php";
-include "../cls/InventoryInterface.php";
-*/
 class PcTest extends PHPUnit_Framework_TestCase
 {
-
     public function testTrue()
     {
         $this->assertTrue(true);
@@ -39,4 +33,4 @@ class PcTest extends PHPUnit_Framework_TestCase
 
         $pc->sendToService();
     }
-} 
+}
