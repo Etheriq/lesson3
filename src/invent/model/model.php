@@ -109,7 +109,7 @@ function showTest()
     $pc1->setHdd("329 Gb");
     $pc1->setRam("2 Gb");
 
-    $pcInfo = "<pre>".$pc1->showFullInfo()."</pre><br/><a href='../index.php'>Back to main page</a>";
+    $pcInfo = "<pre>".$pc1->showFullInfo()."</pre><br/><a href='index.php'>Back to main page</a>";
 
     $response = new Response();
     $response->setContent($pcInfo);
