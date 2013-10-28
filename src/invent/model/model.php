@@ -13,7 +13,7 @@ use invent\cls\Pc;
 use invent\cls\Printer;
 use invent\cls\Monitor;
 
-include "../../../vendor/autoload.php";
+include '../../../vendor/autoload.php';
 
 function pcInit()
 {

@@ -63,6 +63,7 @@ class Printer extends AbstractInventory implements InventoryInterface
     public function sendToService()
     {
         $result = "Printer with inventory number ".$this->getInventNumber()." sent to service organization\n";
+
         return $result;
     }
 
@@ -72,6 +73,7 @@ class Printer extends AbstractInventory implements InventoryInterface
             Inventory number: ".$this->getInventNumber().";\n
             Type of printer: ".$this->getType().";\n
             Model of cartridge for current printer: ".$this->getCartridge().";\n";
+
         return $result;
     }
 }
