@@ -25,7 +25,9 @@ if ($uri == "/") {
     $response = showAll();
     $arg = array();
     foreach ($response as $view) {
-        $arg[] = $view;
+        foreach ($view as $show) {
+            $arg[] = $show;
+        }
     }
     include "view/baseTemplate.html";
 } elseif ($uri == "/showPc") {
